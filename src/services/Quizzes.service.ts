@@ -1,16 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { CategoryModel } from '../models/Category.model';
+import { categories } from '../utils/categories';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QuizzesService {
-  url = 'https://opentdb.com/api.php?amount=10';
   constructor(private http: HttpClient) {}
-  getData(): Observable<any> {
-    return this.http.get(this.url, { headers: { Accept: 'application/json' } });
+  getCategByName(name: string): CategoryModel {
+    return (
+      categories.find((x) => x.name.toLowerCase() == name) || {
+        id: 0,
+        name: '',
+        code: 0,
+      }
+    );
   }
-
-
+  getData(category: number): Observable<any> {
+    return this.http.get(
+      `https://opentdb.com/api.php?amount=10${
+        category == 0 ? '' : `&category=${category}`
+      }&type=boolean`,
+      { headers: { Accept: 'application/json' } }
+    );
+  }
 }

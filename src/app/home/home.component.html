@@ -1,1 +1,38 @@
-<p>home works!</p>
+<div class="block d-flex flex-column align-items-center">
+    <span class="d-flex justify-content-center">
+        <h2>•</h2>
+        <h1 class="px-2">Quizzes</h1>
+        <h2>•</h2>
+    </span>
+    <span class="subtitle d-flex align-items-center flex-wrap justify-content-center">
+        <h4 class="d-flex align-items-center">Challenge<p>yourself</p>:</h4>
+
+        <h4>test your knowledge</h4>
+        <h4>and find your strength.</h4>
+    </span>
+    <!-- <span class="line-block d-flex flex-column border-5">
+        <h5>Choose.</h5>
+        <h5>Or.</h5>
+        <h5>Trust.</h5>
+    </span> -->
+    <!-- {{data}} -->
+    <div class="d-flex flex-wrap items-block">
+        <div class="category-item" *ngFor="let item of getCategories();">
+            <a (click)="goToPlay(item.name.toLocaleLowerCase())">
+                <div class="category-item_bg"></div>
+                <p class="category-item_title">
+                    {{item.name}}
+                </p>
+            </a>
+        </div>
+    </div>
+    <span class="tip-block">
+        <button (click)="goToPlay('random')">I'm lucky</button>
+        <span class="d-flex align-items-center my-2"> <i class="fa-regular fa-lightbulb fa-lg"></i>
+            <p>You can press button and try your lucky! We will create a random quiz with random questions!)
+            </p>
+        </span>
+
+    </span>
+   <app-footer></app-footer>
+</div>
