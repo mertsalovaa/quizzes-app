@@ -1,3 +1,123 @@
+@import "../../styles.scss";
+
 .block {
-    
+  background-image: url("../../utils/images/background-two.png");
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 2.1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  h4,
+  p {
+    font-family: "Montserrat-SemiBold";
+    font-size: 1.2em;
+    color: $darkBrown;
+    margin-bottom: 0;
+    padding: 0.2em;
+    line-height: 1.5em;
+    text-transform: lowercase;
+  }
+  p {
+    font-family: "Montserrat-Regular";
+    text-transform: none;
+    color: $darkBlue;
+  }
+}
+
+ngx-spinner {
+  p {
+    margin-top: 1em;
+    font-size: 1.3em;
+    font-family: "Montserrat-Regular";
+  }
+}
+
+.quiz-block {
+  span span {
+    padding: 10px;
+    i {
+      padding-right: 5px;
+    }
+  }
+  p {
+    -webkit-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+}
+
+.true-false-btn {
+  p {
+    width: 90%;
+    min-height: 15vh;
+  }
+  button {
+    font-family: "Montserrat-SemiBold";
+    color: $darkBrown;
+    padding: 1em;
+    padding-bottom: 0;
+    margin: 1em;
+    font-size: 1.1em;
+    border: none;
+    border-bottom: 2px solid $darkBrown;
+    padding-bottom: 1px;
+    background-color: transparent;
+    &:hover {
+      color: $brown;
+      border-color: $brown;
+    }
+  }
+  button.selected {
+    padding-bottom: 0;
+    border-bottom: 3px solid $brown;
+    color: $brown;
+    font-family: "Montserrat-Bold";
+  }
+}
+
+
+
+#myToast {
+  p {
+    padding: 1em;
+    font-size: 1.1em;
+    color: $darkBrown;
+  }
+  background: $background;
+  border: 1px solid $brown;
+  animation: example 4s ease-in;
+
+  @keyframes example {
+    0% {
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes example2 {
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .quiz-block {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quiz-block {
+    width: 80%;
+  }
 }

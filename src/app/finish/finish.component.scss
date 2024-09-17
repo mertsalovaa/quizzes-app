@@ -1,0 +1,29 @@
+@import url("../../styles.scss");
+
+div {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../../utils/images/background-three.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 2.1em;
+  font-family: "Montserrat-Regular" !important;
+span, h4 {
+    margin: 20px 0;
+}
+  h4 {
+    font-family: "Montserrat-SemiBold";
+  }
+  h5 {
+    margin-bottom: 0;
+  }
+  i {
+    margin: 0 10px;
+    font-size: large;
+  }
+}
+
+.buttons {
+    position: absolute;
+    bottom: 5%;
+}

@@ -33,19 +33,132 @@ footer {
   left: 0;
   box-shadow: 0px -2px 8px 0px $lightGrey;
   border-radius: 16px 16px 0 0;
-  padding: 0.7em;
+  padding: 0.8em 2em;
   & > * {
-margin: 0;
+    margin: 0;
   }
   p {
-padding-left: 10px;
-    font-family: 'Montserrat-Regular';
+    font-family: "Montserrat-Regular";
     font-size: 1.1em;
-color: $darkBrown;
+    color: $darkBrown;
   }
   h5 {
-    font-family: 'Montserrat-SemiBold';
+    font-family: "Montserrat-SemiBold";
     font-size: 1.4em;
     color: $darkBlue;
+  }
+}
+
+.header {
+  padding: 0.25em;
+  h1,
+  h2 {
+    font-family: "Montserrat-Bold";
+    margin-bottom: 0;
+    font-size: 2.6em;
+  }
+
+  h2 {
+    color: $brown;
+  }
+
+  h1 {
+    color: $darkBlue;
+  }
+}
+
+.quiz-block {
+  position: relative;
+  top: 10vh;
+  width: 40%;
+  height: 50vh;
+  padding: 1.5em;
+  background-color: $lightGrey;
+  border: 1px solid $darkBlue;
+  border-radius: 8px;
+}
+
+.buttons {
+  button {
+    display: flex;
+    // width: $button-width;
+    // height: 40px;
+    padding: 7px 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    // line-height: 35px;
+    border: 1px solid;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    transition: all 0.35s;
+    box-sizing: border-box;
+    font-family: "Montserrat-Regular";
+    text-decoration: none;
+  }
+  .cancel-btn {
+    background-color: $lightGrey;
+    border-color: $darkBrown;
+    color: $darkBrown;
+    &:hover {
+      box-shadow: 0 0.25em 0.4em -0.1em $darkBrown;
+      transform: translateY(-0.25em);
+      border-color: $lightGrey;
+      color: $lightGrey;
+      background-color: $darkBrown;
+    }
+  }
+  .next-btn {
+    background-color: $lightGrey;
+    border-color: $darkBlue;
+    color: $darkBlue;
+    &:hover {
+      box-shadow: 0 0.25em 0.4em -0.1em $darkBlue;
+      transform: translateY(-0.25em);
+      border-color: $lightGrey;
+      color: $lightGrey;
+      background-color: $darkBlue;
+    }
+  }
+  .play-finish-btn {
+    background-color: $background;
+    border-color: $brown;
+    color: $brown;
+    font-family: "Montserrat-SemiBold";
+    &:hover {
+      box-shadow: 0 0.25em 0.4em -0.1em $brown;
+      transform: translateY(-0.25em);
+      border-color: $background;
+      color: $background;
+      background-color: $brown;
+    }
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .quiz-block {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quiz-block {
+    width: 80%;
+  }
+}
+
+app-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1003;
+}
+
+@media only screen and (max-width: 1125px) {
+  h1,
+  h2 {
+    font-size: 2.1em !important;
   }
 }

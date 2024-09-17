@@ -12,8 +12,8 @@ export class QuizzesService {
   getCategByName(name: string): CategoryModel {
     return (
       categories.find((x) => x.name.toLowerCase() == name) || {
-        id: 0,
-        name: '',
+        id: categories.length,
+        name: 'random',
         code: 0,
       }
     );

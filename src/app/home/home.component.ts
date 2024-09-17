@@ -23,20 +23,6 @@ export class HomeComponent implements OnInit {
     return categories;
   }
   ngOnInit(): void {
-    // categories.map((categ) => {
-    //   setTimeout(() => {
-    //     this.quizzService.getData(categ.code).subscribe((data: QuizModel) => {
-    //       console.log(data);
-    //       this.data.push({
-    //         response_code: data.response_code,
-    //         results: data.results,
-    //         category: categ.name,
-    //       });
-    //     });
-    //   }, 10000);
-    // });
-    console.log(this.data);
-    // throw new Error('Method not implemented.');
   }
 
   goToPlay(quiz: string) {

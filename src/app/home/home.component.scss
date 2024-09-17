@@ -7,23 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 2.1em;
-  span {
-    padding: 0.25em;
-    h1,
-    h2 {
-      font-family: "Montserrat-Bold";
-      margin-bottom: 0;
-      font-size: 2.6em;
-    }
 
-    h2 {
-      color: $brown;
-    }
-
-    h1 {
-      color: $darkBlue;
-    }
-  }
   .subtitle {
     h4 {
       font-family: "Montserrat-SemiBold";
@@ -121,9 +105,9 @@
       margin: 0 10px;
       font-family: "Montserrat-Regular";
       background-color: $background;
-      padding: 5px;
+      padding: 10px;
       border-radius: 8px;
-      width: 60%;
+      width: 70%;
     }
     &:hover {
       p {
@@ -179,6 +163,7 @@
     }
   }
   &:hover {
+    cursor: pointer;
     a {
       text-decoration: none;
       color: #fff;
@@ -191,18 +176,12 @@
   }
 }
 
-app-footer{
-  width: 100%;
-}
+
 
 @media only screen and (max-width: 1125px) {
   .category-item {
     flex-basis: calc(25% - 1.5em);
     margin: 0.5em;
-  }
-  h1,
-  h2 {
-    font-size: 2.1em !important;
   }
   .subtitle {
     width: 80%;

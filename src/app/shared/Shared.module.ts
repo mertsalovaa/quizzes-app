@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer.component';
-
+import { HeaderComponent } from './header.component';
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [FooterComponent, HeaderComponent],
   imports: [CommonModule],
-  exports: [FooterComponent] // Експортуй компонент, якщо плануєш використовувати його в інших модулях
+  exports: [FooterComponent, HeaderComponent], 
 })
 export class SharedModule {}
